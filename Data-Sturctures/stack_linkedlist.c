@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include <stdlib.h>
+
 typedef struct stack{
     int num;
     struct stack *next;
@@ -7,9 +8,9 @@ typedef struct stack{
 
 int isempty(stck ** headptr){
     if(headptr == NULL)
-        return 2;
+        return 1;
     else
-        return 1;  
+        return 0;  
 }
 
 int pop(stck **headptr){
