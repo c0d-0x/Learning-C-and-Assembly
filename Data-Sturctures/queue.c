@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <time.h>
 #define QUEMAX 256
-    int que[QUEMAX];
-    int count = 0;
+int que[QUEMAX];
+int count = 0;
 
 int enqueue(int val){
     if(count == QUEMAX) {
