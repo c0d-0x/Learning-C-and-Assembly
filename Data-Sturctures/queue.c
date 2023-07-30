@@ -7,12 +7,12 @@ int count = 0;
 int enqueue(int val){
     if(count == QUEMAX) {
         fprintf(stderr, "queue is full!");
-        return 1;}
+        return 1;
+    }
     que[count] = val;
     count++;
     return 0;
 }
-
 
 int dequeue(){
     int i, val;
