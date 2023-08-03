@@ -10,11 +10,21 @@ typedef struct queue_t{
 void enqueue(queue_t** head, int value){
     queue_t* tmp;
     tmp = malloc(sizeof(queue_t));
+    tmp->elem = value;
 
     if ((*head) == NULL){
-    tmp->elem = value;
-    tmp->next = (*head);
+       tmp->next = (*head);
     (*head) = tmp;
+    }else {
+    queue_t *prev;
+    prev = (*head);
+    
+    while (prev->next != NULL) {
+    prev = prev->next;
+    }   
+    tmp->next = prev->next;
+    prev->next = tmp;
+
     } 
 
 
