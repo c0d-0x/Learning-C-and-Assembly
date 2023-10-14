@@ -42,22 +42,19 @@ int  main(void){
 
 
 
-/* prints the values of the list. */
 void print_list(node_t* L){
-    // creating a temp variable...
     node_t * tmp;
     tmp = L;
 
     while (tmp != NULL) {
 
         printf("%d\n", tmp->val);
-        tmp = tmp->next; // pointing to the next item.
+        tmp = tmp->next;
 
     }
 }
 
 
-/* Pushes a value to the end of the list */
 void push(node_t* L, int value){
 
     node_t* tmp = L;
@@ -73,7 +70,6 @@ void push(node_t* L, int value){
 
 
 int initList( node_t ** headptr, int value){
-    // error free
     *headptr = malloc(sizeof(node_t));
     if(headptr == NULL){
         return -1;
@@ -84,13 +80,7 @@ int initList( node_t ** headptr, int value){
     return 1;
 }
 
-/* To add to the beginning of the list, we will need to do the following: 
-   1. Create a new item and set its value 
-   2. Link the new item to point to the head of the list 
-   3. Set the head of the list to be our new item */
 
-/*  The address of the pointer it self must be passed to the 
-    function in other to be able to manuplate is. */
 
 void newNode(node_t ** head, int value){
     node_t * newval;
@@ -100,12 +90,6 @@ void newNode(node_t ** head, int value){
     (*head) = newval;
 }
 
-/*Removing the first item (popping from the list)
-  To pop a variable, we will need to reverse this action:
-
-  1. Take the next item that the head points to and save it
-  2. Free the head item
-  3. Set the head to be the next item that we've stored on the side*/
 
 int popHead(node_t** head){
 
@@ -122,8 +106,6 @@ int popHead(node_t** head){
     return 1;
 }
 
-// Removing the last element of the list
-
 int removeLast(node_t * headptr){
     int result;    
     if(headptr != NULL){
@@ -132,7 +114,6 @@ int removeLast(node_t * headptr){
             free(headptr);
             return result;
         }
-
         node_t * temp = headptr;
         while (temp->next->next != NULL) {
             temp = temp->next;
@@ -159,7 +140,7 @@ int removebyValue(node_t** headptr, int value){
             removed = temp->val;
             prev->next = temp->next;
             free(temp);
-            /* break; */
+            /* break; */ // for just the first occurance
             temp = prev;
         }
         prev = temp;
