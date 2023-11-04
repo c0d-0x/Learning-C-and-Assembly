@@ -13,7 +13,6 @@ void insert_end(Node ** root, int value){
     }
     new_node->value = value;
     if (*root == NULL) {
-
         new_node->next = *root;
         *root = new_node;
         return;
@@ -26,7 +25,15 @@ void insert_end(Node ** root, int value){
     tmp->next = new_node;
 
 }
-
+void insert_head(Node ** head, int value){
+    Node * new_node = malloc(sizeof(Node));
+    if (new_node == NULL) {
+        exit(1);
+    }
+    new_node->value = value;
+    new_node->next = *head;
+    *head = new_node;
+}
 void printlist(Node * head){
     Node * tmp = head;
     while (tmp != NULL) {
@@ -40,7 +47,9 @@ int main(){
     head = NULL;
     insert_end(&head, 3);
     insert_end(&head, 4);
-    
+   insert_head(&head, 2); 
+   insert_head(&head, 1); 
+   insert_head(&head, 0); 
     printlist(head);
 
 
