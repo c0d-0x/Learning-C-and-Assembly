@@ -38,6 +38,7 @@ void insert_head(Node ** head, int value){
 }
 
 void deleNode(Node ** head, int value){
+   if(* head){
     //this function deletes all the occurance of a Node by value.
     Node *tmp = *head;
 
@@ -45,15 +46,32 @@ void deleNode(Node ** head, int value){
        *head = (*head)->next;
        free(tmp);
     }
-    Node *prev = tmp;
+    tmp = *head;
+    Node *prev = *head;
     do {
         if(tmp->value == value){
-            
+           prev->next = tmp->next; 
+           free(tmp);
+           tmp = prev;
+
         }
-    
+        prev = tmp;
+        tmp = tmp->next;
     } while(tmp->next != NULL);
+   }
 }
 
+void memcleanup(Node ** head){
+    Node * tmp;
+    while ((*head) != NULL ) {
+       tmp = *head;
+       *head = (*head)->next;
+       free(tmp);
+    
+    }
+
+
+}
 
 void printlist(Node * head){
     Node * tmp = head;
@@ -71,6 +89,13 @@ int main(){
     insert_head(&head, 2); 
     insert_head(&head, 1); 
     insert_head(&head, 0); 
+    insert_head(&head, 1); 
+    insert_head(&head, 0);
+    deleNode(&head, 3);
+    deleNode(&head, 2);
+    deleNode(&head, 0);
+    printlist(head);
+    memcleanup(&head);
     printlist(head);
 
 }
