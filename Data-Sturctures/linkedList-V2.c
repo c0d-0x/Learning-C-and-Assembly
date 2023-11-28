@@ -48,7 +48,7 @@ void deleNode(Node ** head, int value){
     }
     tmp = *head;
     Node *prev = *head;
-    do {
+     while(tmp != NULL) {
         if(tmp->value == value){
            prev->next = tmp->next; 
            free(tmp);
@@ -57,7 +57,7 @@ void deleNode(Node ** head, int value){
         }
         prev = tmp;
         tmp = tmp->next;
-    } while(tmp->next != NULL);
+    }
    }
 }
 
