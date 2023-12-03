@@ -66,11 +66,7 @@ void memcleanup(Node ** head){
     while ((*head) != NULL ) {
        tmp = *head;
        *head = (*head)->next;
-       free(tmp);
-    
     }
-
-
 }
 
 void printlist(Node * head){
@@ -82,8 +78,7 @@ void printlist(Node * head){
 }
 
 int main(){
-    Node * head;
-    head = NULL;
+    Node * head = NULL;
     insert_end(&head, 3);
     insert_end(&head, 4);
     insert_head(&head, 2); 
@@ -97,5 +92,5 @@ int main(){
     printlist(head);
     memcleanup(&head);
     printlist(head);
-
+return 0;
 }
