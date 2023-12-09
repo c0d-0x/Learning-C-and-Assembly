@@ -79,11 +79,18 @@ void deleteStudent(student_t **ptr, int ID) {
 
 void displayStudent(student_t *head) {
 
-  student_t *tmp = malloc(sizeof(student_t *));
+
+  student_t *tmp = malloc(sizeof(student_t ));
   tmp = head;
   while (tmp != NULL) {
     printf("ID: %d\nName %s %s", tmp->info.ID, tmp->info.Fname,
            tmp->info.Lname);
     tmp = tmp->next;
-  }
+    }
+    student_t *tmp = malloc(sizeof(student_t *));
+    tmp = head;
+    while (tmp != NULL) {
+        printf("ID: %d\nName: %s %s", tmp->info.ID, tmp->info.Fname, tmp->info.Lname);      
+        tmp = tmp->next;
+    }
 };
