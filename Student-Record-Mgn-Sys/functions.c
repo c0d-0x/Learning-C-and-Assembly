@@ -48,15 +48,6 @@ void Createstudent(student_t **ptr) {
   (*ptr) = new;
 }
 
-<<<<<<< HEAD
-void displayStudent(student_t *head){
-
-    student_t *tmp = malloc(sizeof(student_t *));
-    tmp = head;
-    while (tmp != NULL) {
-        printf("ID: %d\nName: %s %s", tmp->info.ID, tmp->info.Fname, tmp->info.Lname);      
-        tmp = tmp->next;
-=======
 void deleteStudent(student_t **ptr, int ID) {
   student_t *temp, *prev;
   if ((*ptr)->info.ID == ID) {
@@ -67,7 +58,6 @@ void deleteStudent(student_t **ptr, int ID) {
       temp = (*ptr)->next;
       free((*ptr));
       (*ptr) = temp;
->>>>>>> Sdt-mgnt
     }
   } else {
 
@@ -89,7 +79,7 @@ void deleteStudent(student_t **ptr, int ID) {
 
 void displayStudent(student_t *head) {
 
-  student_t *tmp = malloc(sizeof(student_t *));
+  student_t *tmp = malloc(sizeof(student_t));
   tmp = head;
   while (tmp != NULL) {
     printf("ID: %d\nName %s %s", tmp->info.ID, tmp->info.Fname,
