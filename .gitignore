@@ -1,4 +1,5 @@
-/*.out
-/*.o
-/makefile
+*.out
+*.o
+makefile
+.vscode
 
