@@ -6,20 +6,22 @@
 
     + Simple Calculator ✔  
     + Palindrome checker ✔
+    + password manager
+    + Tic-tac-toe Game
    
 ### Intermediate
 
-    + password manager
-    + Tic-tac-toe Game
+   
     + Snakes and Ladders Game
     + Pac-Man Game
+    + Web Application Firewall 
+    + Keylogger 
     
 
 ### Advanced and Cyber Security Related!!!
 
    
-    + Web Application Firewall 
-    + Keylogger 
+   
     + Packet Sniffing 
     + Image Encryption 
     + Web-Based Facial Authentication System 
