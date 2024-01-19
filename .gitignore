@@ -1,5 +1,6 @@
 *.out
 *.o
+test.*
 makefile
 .vscode
 

@@ -1,4 +1,4 @@
-# My low level programming journey!!!
+# Learning C programming Language!!
 
 ## Projects
 
@@ -6,20 +6,22 @@
 
     + Simple Calculator ✔  
     + Palindrome checker ✔
-    + Student Record management system
-
-### Intermediate
-
     + password manager
     + Tic-tac-toe Game
-    + Library Management System
+   
+### Intermediate
 
-### Advanced and Cyber Security Related!!!
-
+   
     + Snakes and Ladders Game
     + Pac-Man Game
     + Web Application Firewall 
     + Keylogger 
+    
+
+### Advanced and Cyber Security Related!!!
+
+   
+   
     + Packet Sniffing 
     + Image Encryption 
     + Web-Based Facial Authentication System 
