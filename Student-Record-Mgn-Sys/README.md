@@ -1,3 +1,0 @@
-# Student Records Management System
-
-
