@@ -6,18 +6,18 @@
 
     + Simple Calculator ✔  
     + Palindrome checker ✔
-    + Student Record management system
-
+   
 ### Intermediate
 
     + password manager
     + Tic-tac-toe Game
-    + Library Management System
+    + Snakes and Ladders Game
+    + Pac-Man Game
+    
 
 ### Advanced and Cyber Security Related!!!
 
-    + Snakes and Ladders Game
-    + Pac-Man Game
+   
     + Web Application Firewall 
     + Keylogger 
     + Packet Sniffing 
