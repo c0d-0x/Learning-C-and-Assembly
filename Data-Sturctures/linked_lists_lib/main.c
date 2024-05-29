@@ -1,4 +1,5 @@
 #include "src/linked_list.h"
+#include <stdio.h>
 
 int main(void) {
 
@@ -28,6 +29,8 @@ int main(void) {
   printf("Popped: %s\nBreaked: %s\n", (char *)popped->data,
          (char *)breaked->data);
   print_list(head);
+
+  printf("<< ELEMENTS %ld >>\n", count_list(head));
 
   free(popped);
   free(breaked);

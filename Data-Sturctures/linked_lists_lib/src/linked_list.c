@@ -1,6 +1,19 @@
 #include "linked_list.h"
+#include <stdio.h>
 
 node_t *init_list(void) { return (node_t *)NULL; }
+
+size_t count_list(node_t *head) {
+  size_t num = 0;
+  node_t *node;
+  node = head;
+
+  while (node != NULL) {
+    node = node->next;
+    num++;
+  }
+  return num;
+}
 
 void print_list(node_t *head) {
   node_t *node;
