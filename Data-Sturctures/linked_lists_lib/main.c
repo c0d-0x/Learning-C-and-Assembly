@@ -18,16 +18,16 @@ int main(void) {
   insert_to_head(&head, data1);
   insert_to_head(&head, data2);
 
-  insert_to_tale(&head, data3);
-  insert_to_tale(&head, data4);
-  insert_to_tale(&head, data5);
+  insert_to_tail(&head, data3);
+  insert_to_tail(&head, data4);
+  insert_to_tail(&head, data5);
 
   delete_by_position(&head, 5);
-  insert_to_tale(&head, data6);
+  insert_to_tail(&head, data6);
   delete_by_position(&head, 6);
 
   node_t *popped = pop_head(&head);
-  node_t *breaked = break_tale(&head);
+  node_t *breaked = break_tail(&head);
   printf("Popped: %s\nBreaked: %s\n", (char *)popped->data,
          (char *)breaked->data);
   print_list(head, print);
@@ -36,6 +36,6 @@ int main(void) {
 
   free(popped);
   free(breaked);
-  distroy_list(&head);
+  destroy_list(&head);
   return EXIT_SUCCESS;
 }

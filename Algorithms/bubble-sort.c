@@ -11,20 +11,21 @@ void swap(const void *a, const void *b) {
 
 int main() {
   int j = TMAX - 1, i;
-  bool sorted = true;
+  bool sorted = false;
 
   int array[TMAX] = {2, 5, 6, 3, 1, 10, 53, 4, 8, 12};
 
-  while (j > 0 && sorted) {
-    sorted = false;
+  while (j > 0 && !sorted) {
+    sorted = true;
     for (i = 0; i < j; i++) {
       if (array[i] > array[i + 1]) {
         swap(&array[i], &array[i + 1]);
-        sorted = true;
+        sorted = false;
       }
     }
     j--;
   }
+
   printf("Sorted Array: [");
   for (i = 0; i < TMAX; i++) {
     printf("%d", array[i]);

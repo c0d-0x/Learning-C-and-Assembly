@@ -21,7 +21,7 @@ int main() {
 
     if (min != i) {
       swap(&array[min], &array[i]);
-      printf("[%d] Swaped ( %d, %d )\n", i, array[min], array[i]);
+      printf("[%d] Swapped ( %d, %d )\n", i, array[min], array[i]);
     }
   }
   printf("\nSorted Array: ");

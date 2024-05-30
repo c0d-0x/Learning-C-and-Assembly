@@ -1,5 +1,4 @@
 #include "linked_list.h"
-#include <stdio.h>
 
 node_t *init_list(void) { return (node_t *)NULL; }
 
@@ -39,7 +38,7 @@ int insert_to_head(node_t **head, void *data) {
   return 0;
 }
 
-int insert_to_tale(node_t **head, void *data) {
+int insert_to_tail(node_t **head, void *data) {
 
   if ((*head) == NULL) {
     insert_to_head(head, data);
@@ -76,7 +75,7 @@ node_t *pop_head(node_t **head) {
   return node;
 }
 
-node_t *break_tale(node_t **head) {
+node_t *break_tail(node_t **head) {
   if ((*head) == NULL) {
     return NULL;
   }
@@ -96,15 +95,17 @@ node_t *break_tale(node_t **head) {
   return node;
 }
 
-void *delete_by_position(node_t **head, size_t position) {
+node_t *delete_by_position(node_t **head, size_t position) {
 
   if ((*head) == NULL) {
     return NULL;
   }
 
-  void *data = NULL;
-  node_t *prev = NULL, *node = (*head);
+  node_t *data = NULL;
+  node_t *prev = NULL;
+  node_t *node = (*head);
   size_t i = 1;
+
   while (node != NULL && i < position) {
     i++;
     prev = node;
@@ -113,9 +114,9 @@ void *delete_by_position(node_t **head, size_t position) {
 
   if (node != NULL) {
     prev->next = node->next;
-    data = node->data;
-    free(node);
+    data = node;
   }
+
   return data;
 }
 
@@ -124,7 +125,7 @@ void *delete_by_position(node_t **head, size_t position) {
 // }
 //
 
-void distroy_list(node_t **head) {
+void destroy_list(node_t **head) {
   node_t *node;
   while ((*head) != NULL) {
     node = (*head);
