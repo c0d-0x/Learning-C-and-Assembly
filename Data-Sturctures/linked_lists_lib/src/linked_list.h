@@ -10,7 +10,7 @@ typedef struct node {
 
 node_t *init_list(void);
 size_t count_list(node_t *head);
-void print_list(node_t *head);
+void print_list(node_t *head, void (*f)(node_t *));
 int insert_to_tale(node_t **head, void *data);
 int insert_to_head(node_t **head, void *data);
 void *delete_by_position(node_t **head, size_t position);

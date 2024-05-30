@@ -1,6 +1,8 @@
 #include "src/linked_list.h"
 #include <stdio.h>
 
+void print(node_t *node) { printf("data: %s\n", (char *)node->data); }
+
 int main(void) {
 
   node_t *head = init_list();
@@ -28,9 +30,9 @@ int main(void) {
   node_t *breaked = break_tale(&head);
   printf("Popped: %s\nBreaked: %s\n", (char *)popped->data,
          (char *)breaked->data);
-  print_list(head);
+  print_list(head, print);
 
-  printf("<< ELEMENTS %ld >>\n", count_list(head));
+  printf("<< %ld ELEMENTS OF SIZE %ld >>\n", count_list(head), sizeof(node_t));
 
   free(popped);
   free(breaked);

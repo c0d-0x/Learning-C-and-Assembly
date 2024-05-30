@@ -15,12 +15,12 @@ size_t count_list(node_t *head) {
   return num;
 }
 
-void print_list(node_t *head) {
+void print_list(node_t *head, void (*f)(node_t *)) {
   node_t *node;
   node = head;
 
   while (node != NULL) {
-    printf("Data: %s\n", (char *)node->data);
+    (*f)(node);
     node = node->next;
   }
 }
