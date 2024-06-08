@@ -112,7 +112,7 @@ node_t *delete_by_position(node_t **head, size_t position) {
     node = node->next;
   }
 
-  if (node != NULL) {
+  if (node != NULL && prev != NULL) {
     prev->next = node->next;
     data = node;
   }

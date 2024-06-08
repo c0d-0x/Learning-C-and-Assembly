@@ -27,15 +27,15 @@ int main(void) {
   delete_by_position(&head, 6);
 
   node_t *popped = pop_head(&head);
-  node_t *breaked = break_tail(&head);
+  node_t *broken = break_tail(&head);
   printf("Popped: %s\nBreaked: %s\n", (char *)popped->data,
-         (char *)breaked->data);
+         (char *)broken->data);
   print_list(head, print);
 
   printf("<< %ld ELEMENTS OF SIZE %ld >>\n", count_list(head), sizeof(node_t));
 
   free(popped);
-  free(breaked);
+  free(broken);
   destroy_list(&head);
   return EXIT_SUCCESS;
 }
