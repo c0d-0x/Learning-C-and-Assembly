@@ -3,15 +3,15 @@
 node_t *init_list(void) { return (node_t *)NULL; }
 
 size_t count_list(node_t *head) {
-  size_t num = 0;
+  size_t nbr_nodes = 0;
   node_t *node;
   node = head;
 
   while (node != NULL) {
     node = node->next;
-    num++;
+    nbr_nodes++;
   }
-  return num;
+  return nbr_nodes;
 }
 
 void print_list(node_t *head, void (*f)(node_t *)) {
@@ -126,13 +126,16 @@ node_t *delete_by_position(node_t **head, size_t position) {
 //
 
 void destroy_list(node_t **head) {
+
   node_t *node;
   while ((*head) != NULL) {
     node = (*head);
     (*head) = (*head)->next;
+
 #ifdef DATA_ALLOCATED
     free(node->data); /* only of data allocated data from the heap*/
 #endif                /* ifdef DATA_ALLOCATED */
+
     free(node);
   }
 }

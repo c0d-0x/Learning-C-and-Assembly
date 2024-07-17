@@ -23,5 +23,5 @@ $(OBJFILES): $(CFILES)
 
 clean:
 	rm $(BIN) $(OBJFILES)
-run:
+start:
 	 $(BIN)
